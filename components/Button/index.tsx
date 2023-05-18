@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.css";
 
 interface ButtonProps {
   /**
@@ -10,7 +10,7 @@ interface ButtonProps {
   /**
    * How large should the button be?
    */
-  size?: 'lg' | 'sm';
+  size?: "lg" | "sm";
   /**
    * Button contents
    */
@@ -25,15 +25,15 @@ interface ButtonProps {
  * Primary UI component for user interaction
  */
 export const Button = ({
-  mode = 'primary',
-  size = 'lg',
+  mode = "primary",
+  size = "lg",
   label,
   ...props
 }: ButtonProps) => {
   return (
     <button
       type="button"
-      className={['btn', `btn-${size}`, `btn-${mode}`].join(' ')}
+      className={["btn", `btn-${size}`, `btn-${mode}`].join(" ")}
       {...props}
     >
       {label}
