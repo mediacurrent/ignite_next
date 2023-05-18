@@ -1,19 +1,16 @@
-import React from 'react';
-import './button.css';
+import React, { useEffect } from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
 
 interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
    */
-  primary?: boolean;
+  mode?: string;
   /**
-   * What background color to use
-   */
-  backgroundColor?: string;
   /**
    * How large should the button be?
    */
-  size?: 'small' | 'medium' | 'large';
+  size?: 'lg' | 'sm';
   /**
    * Button contents
    */
@@ -28,25 +25,18 @@ interface ButtonProps {
  * Primary UI component for user interaction
  */
 export const Button = ({
-  primary = false,
-  size = 'medium',
-  backgroundColor,
+  mode = 'primary',
+  size = 'lg',
   label,
   ...props
 }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
+      className={['btn', `btn-${size}`, `btn-${mode}`].join(' ')}
       {...props}
     >
       {label}
-      <style jsx>{`
-        button {
-          background-color: ${backgroundColor};
-        }
-      `}</style>
     </button>
   );
 };
