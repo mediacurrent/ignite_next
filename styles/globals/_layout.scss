@@ -1,0 +1,38 @@
+// Styles to over-ride Bootstrap.
+// see: https://getbootstrap.com/docs/5.2/utilities/flex/ for more utilities.
+
+body {
+  // Adding overflow-x: hidden to the body tag, we remove the possibility of the horizontal scroll bar showing up.
+  // This happens in some cases on small screens when an element exceeds the overall width.
+  overflow-x: hidden;
+}
+
+.container-fluid {
+  @include px(3);
+  max-width: to-rem(2400);
+
+  @include media-breakpoint-up(sm) {
+    @include px(5);
+  }
+
+  @include media-breakpoint-up(lg) {
+    @include px(8);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    @include px(10);
+  }
+
+  // We over-ride the global .row padding.
+  .row {
+    --bs-gutter-x: 1rem;
+    --bs-gutter-y: 0;
+
+    @include media-breakpoint-up(lg) {
+      --bs-gutter-x: 1.5rem;
+    }
+    @include media-breakpoint-up(xxl) {
+      --bs-gutter-x: 2rem;
+    }
+  }
+}
