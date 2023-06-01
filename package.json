@@ -11,7 +11,9 @@
     "lint": "next lint && npx prettier --check .",
     "format": "npx prettier --write .",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "cypress:open": "cypress open",
+    "test:components": "npx cypress run --component"
   },
   "dependencies": {
     "@mdi/js": "^7.2.96",
@@ -39,6 +41,7 @@
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
     "autoprefixer": "^10.4.13",
+    "cypress": "^12.13.0",
     "eslint": "^8.28.0",
     "eslint-config-next": "^13.0.6",
     "eslint-plugin-storybook": "^0.6.12",

@@ -12,22 +12,22 @@ export const HeroComponent = ({
 }: HeroTypes) => (
   <Card bg="dark" text="light" className="hero border-0 overlay rounded">
     <>
-      <Image src={img} className="card-img" rounded fluid alt="test image" />
+      <Image src={img} className="card-img" rounded fluid alt="test image" data-cy='image' />
     </>
     <Card.ImgOverlay className="d-flex align-items-center justify-content-center text-align-center">
       <Col lg={8}>
         <div className="text-uppercase mb-2 fs-7">
           <small>
-            <span dangerouslySetInnerHTML={{ __html: title }} />
+            <span data-cy='title' dangerouslySetInnerHTML={{ __html: title }} />
           </small>
         </div>
         <h2 className="heading display-3 fw-bold" aria-label="No value">
-          <span dangerouslySetInnerHTML={{ __html: headingText }} />
+          <span data-cy='heading' dangerouslySetInnerHTML={{ __html: headingText }} />
         </h2>
         <div className="rich-text mb-3 fs-5">
-          <span dangerouslySetInnerHTML={{ __html: paragraphText }} />
+          <span data-cy='paragraph' dangerouslySetInnerHTML={{ __html: paragraphText }} />
         </div>
-        <a href="#" className="btn btn-primary" role="button">
+        <a href="#" className="btn btn-primary" role="button" data-cy='button'>
           <div className="d-flex">
             <span dangerouslySetInnerHTML={{ __html: buttonText }} />
             <Icon path={mdiArrowRight} size={1} />
