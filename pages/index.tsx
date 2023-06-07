@@ -1,13 +1,13 @@
-import Head from "next/head";
-import { GetStaticPropsResult } from "next";
+import Head from 'next/head'
+import { GetStaticPropsResult } from 'next'
 
-import { query } from "lib/drupal";
-import { Layout } from "components/layout";
-import { NodeArticleTeaser } from "components/node--article--teaser";
-import { Article } from "types";
+import { query } from 'lib/drupal'
+import { Layout } from 'components/layout'
+import { NodeArticleTeaser } from 'components/node--article--teaser'
+import { Article } from 'types'
 
 interface IndexPageProps {
-  nodes: Article[];
+  nodes: Article[]
 }
 
 export default function IndexPage({ nodes }: IndexPageProps) {
@@ -34,7 +34,7 @@ export default function IndexPage({ nodes }: IndexPageProps) {
         )}
       </div>
     </Layout>
-  );
+  )
 }
 
 export async function getStaticProps(
@@ -43,8 +43,8 @@ export async function getStaticProps(
   // Fetch the first 10 articles.
   const data = await query<{
     nodeArticles: {
-      nodes: Article[];
-    };
+      nodes: Article[]
+    }
   }>({
     query: `
       query {
@@ -68,12 +68,12 @@ export async function getStaticProps(
           }
         }
       }
-    `,
-  });
+    `
+  })
 
   return {
     props: {
-      nodes: data?.nodeArticles?.nodes ?? [],
-    },
-  };
+      nodes: data?.nodeArticles?.nodes ?? []
+    }
+  }
 }

@@ -21,7 +21,7 @@ import './commands'
 
 import { mount } from 'cypress/react18'
 
-import "@/styles/_init.scss"
+import '@/styles/_init.scss'
 
 // Augment the Cypress namespace to include type definitions for
 // your custom command.
