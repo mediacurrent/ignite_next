@@ -1,12 +1,12 @@
-import { defineConfig } from "cypress";
+import { defineConfig } from 'cypress'
 
 export default defineConfig({
   component: {
     devServer: {
-      framework: "next",
-      bundler: "webpack",
+      framework: 'next',
+      bundler: 'webpack'
     },
     viewportWidth: 1200,
-    viewportHeight: 800,
-  },
-});
+    viewportHeight: 800
+  }
+})

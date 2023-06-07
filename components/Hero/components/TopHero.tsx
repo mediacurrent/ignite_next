@@ -1,14 +1,14 @@
-import { HeroTypes } from "@/types/Hero";
-import Icon from "@mdi/react";
-import { mdiArrowRight } from "@mdi/js";
-import { Col, Image, Card } from "react-bootstrap";
+import { HeroTypes } from '@/types/Hero'
+import Icon from '@mdi/react'
+import { mdiArrowRight } from '@mdi/js'
+import { Col, Image, Card } from 'react-bootstrap'
 
 export const TopHero = ({
   img,
-  title = "",
-  headingText = "",
-  paragraphText = "",
-  buttonText = "",
+  title = '',
+  headingText = '',
+  paragraphText = '',
+  buttonText = ''
 }: HeroTypes) => (
   <Card text="dark" className="hero border-0 image_top">
     <div className="pb-3 pb-lg-8">
@@ -54,4 +54,4 @@ export const TopHero = ({
       </Col>
     </div>
   </Card>
-);
+)

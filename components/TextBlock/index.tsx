@@ -1,8 +1,8 @@
-import { Col, Image, Card, Row } from "react-bootstrap";
+import { Col, Image, Card, Row } from 'react-bootstrap'
 type TextBlockTypes = {
-  title?: string;
-  paragraphText?: string;
-};
+  title?: string
+  paragraphText?: string
+}
 
 const TextBlock = ({ title, paragraphText }: TextBlockTypes) => {
   return (
@@ -19,7 +19,7 @@ const TextBlock = ({ title, paragraphText }: TextBlockTypes) => {
         </div>
       </Col>
     </Row>
-  );
-};
+  )
+}
 
-export default TextBlock;
+export default TextBlock

@@ -1,38 +1,38 @@
-@import "bootstrap/scss/mixins/banner";
-@include bsBanner("");
+@import 'bootstrap/scss/mixins/banner';
+@include bsBanner('');
 
 // Configuration
-@import "bootstrap/scss/functions";
+@import 'bootstrap/scss/functions';
 
 // Use custom variables file
-@import "./variables";
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/variables-dark";
+@import './variables';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/variables-dark';
 
-@import "bootstrap/scss/maps";
-@import "bootstrap/scss/mixins";
-@import "bootstrap/scss/utilities";
+@import 'bootstrap/scss/maps';
+@import 'bootstrap/scss/mixins';
+@import 'bootstrap/scss/utilities';
 
 // Layout & common components
-@import "bootstrap/scss/root";
-@import "bootstrap/scss/reboot";
-@import "bootstrap/scss/type";
-@import "bootstrap/scss/images";
-@import "containers";
-@import "grid";
-@import "bootstrap/scss/tables";
-@import "bootstrap/scss/forms";
-@import "bootstrap/scss/transitions";
-@import "bootstrap/scss/modal";
-@import "bootstrap/scss/list-group";
-@import "bootstrap/scss/buttons";
-@import "bootstrap/scss/tooltip";
-@import "bootstrap/scss/card";
+@import 'bootstrap/scss/root';
+@import 'bootstrap/scss/reboot';
+@import 'bootstrap/scss/type';
+@import 'bootstrap/scss/images';
+@import 'containers';
+@import 'grid';
+@import 'bootstrap/scss/tables';
+@import 'bootstrap/scss/forms';
+@import 'bootstrap/scss/transitions';
+@import 'bootstrap/scss/modal';
+@import 'bootstrap/scss/list-group';
+@import 'bootstrap/scss/buttons';
+@import 'bootstrap/scss/tooltip';
+@import 'bootstrap/scss/card';
 
 // Helpers
-@import "bootstrap/scss/helpers";
+@import 'bootstrap/scss/helpers';
 
 // Utilities
-@import "bootstrap/scss/utilities/api";
+@import 'bootstrap/scss/utilities/api';
 
-@import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200";
+@import 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200';

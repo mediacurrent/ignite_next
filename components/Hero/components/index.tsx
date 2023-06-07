@@ -1,14 +1,14 @@
-import { HeroTypes } from "@/types/Hero";
-import Icon from "@mdi/react";
-import { mdiArrowRight } from "@mdi/js";
-import { Col, Image, Card } from "react-bootstrap";
+import { HeroTypes } from '@/types/Hero'
+import Icon from '@mdi/react'
+import { mdiArrowRight } from '@mdi/js'
+import { Col, Image, Card } from 'react-bootstrap'
 
 export const HeroComponent = ({
   img,
-  title = "",
-  headingText = "",
-  paragraphText = "",
-  buttonText = "",
+  title = '',
+  headingText = '',
+  paragraphText = '',
+  buttonText = ''
 }: HeroTypes) => (
   <Card bg="dark" text="light" className="hero border-0 overlay rounded">
     <>
@@ -49,4 +49,4 @@ export const HeroComponent = ({
       </Col>
     </Card.ImgOverlay>
   </Card>
-);
+)

@@ -1,18 +1,18 @@
-import { GetStaticPathsResult, GetStaticPropsResult } from "next";
-import Head from "next/head";
+import { GetStaticPathsResult, GetStaticPropsResult } from 'next'
+import Head from 'next/head'
 
-import { Article, NodesPath, Page } from "types";
-import { drupal, query } from "lib/drupal";
-import { NodeArticle } from "components/node--article";
-import { NodeBasicPage } from "components/node--basic-page";
-import { Layout } from "components/layout";
+import { Article, NodesPath, Page } from 'types'
+import { drupal, query } from 'lib/drupal'
+import { NodeArticle } from 'components/node--article'
+import { NodeBasicPage } from 'components/node--basic-page'
+import { Layout } from 'components/layout'
 
 interface NodePageProps {
-  resource: Article | Page;
+  resource: Article | Page
 }
 
 export default function NodePage({ resource }: NodePageProps) {
-  if (!resource) return null;
+  if (!resource) return null
 
   return (
     <Layout>
@@ -20,18 +20,18 @@ export default function NodePage({ resource }: NodePageProps) {
         <title>{resource.title}</title>
         <meta name="description" content="A Next.js site powered by Drupal." />
       </Head>
-      {resource.__typename === "NodePage" && <NodeBasicPage node={resource} />}
-      {resource.__typename === "NodeArticle" && <NodeArticle node={resource} />}
+      {resource.__typename === 'NodePage' && <NodeBasicPage node={resource} />}
+      {resource.__typename === 'NodeArticle' && <NodeArticle node={resource} />}
     </Layout>
-  );
+  )
 }
 
 export async function getStaticPaths(context): Promise<GetStaticPathsResult> {
   // Fetch the paths for the first 50 articles and pages.
   // We'll fallback to on-demand generation for the rest.
   const data = await query<{
-    nodeArticles: NodesPath;
-    nodePages: NodesPath;
+    nodeArticles: NodesPath
+    nodePages: NodesPath
   }>({
     query: `query {
       nodeArticles(first: 50) {
@@ -44,20 +44,20 @@ export async function getStaticPaths(context): Promise<GetStaticPathsResult> {
           path,
         }
       }
-    }`,
-  });
+    }`
+  })
 
   // Build static paths.
   const paths = drupal.buildStaticPathsParamsFromPaths(
     [...data?.nodeArticles?.nodes, ...data?.nodePages?.nodes].map(
       ({ path }) => path
     )
-  );
+  )
 
   return {
     paths,
-    fallback: "blocking",
-  };
+    fallback: 'blocking'
+  }
 }
 
 export async function getStaticProps(
@@ -65,12 +65,12 @@ export async function getStaticProps(
 ): Promise<GetStaticPropsResult<NodePageProps>> {
   if (!context?.params?.slug) {
     return {
-      notFound: true,
-    };
+      notFound: true
+    }
   }
 
   const data = await query<{
-    nodeByPath: Article;
+    nodeByPath: Article
   }>({
     query: `query ($path: String!){
       nodeByPath(path: $path) {
@@ -105,23 +105,23 @@ export async function getStaticProps(
       }
     }`,
     variables: {
-      path: `/${context.params.slug.join("/")}`,
-    },
-  });
+      path: `/${context.params.slug.join('/')}`
+    }
+  })
 
-  const resource = data?.nodeByPath;
+  const resource = data?.nodeByPath
 
   // If we're not in preview mode and the resource is not published,
   // Return page not found.
   if (!resource || (!context.preview && resource?.status === false)) {
     return {
-      notFound: true,
-    };
+      notFound: true
+    }
   }
 
   return {
     props: {
-      resource,
-    },
-  };
+      resource
+    }
+  }
 }

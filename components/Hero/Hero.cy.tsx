@@ -1,13 +1,13 @@
-import React from "react";
-import Hero from "./index";
-import { BottomHero } from "./components/BottomHero";
-import { LeftHero } from "./components/LeftHero";
-import { RightHero } from "./components/RightHero";
-import { TopHero } from "./components/TopHero";
+import React from 'react'
+import Hero from './index'
+import { BottomHero } from './components/BottomHero'
+import { LeftHero } from './components/LeftHero'
+import { RightHero } from './components/RightHero'
+import { TopHero } from './components/TopHero'
 
-describe("<Hero />", () => {
-  describe("Primary Hero", () => {
-    it("should render Primary Hero", () => {
+describe('<Hero />', () => {
+  describe('Primary Hero', () => {
+    it('should render Primary Hero', () => {
       cy.mount(
         <Hero
           buttonText="Learn more &ensp;"
@@ -20,23 +20,23 @@ describe("<Hero />", () => {
           position="primary"
           title="Ignite"
         />
-      );
-      cy.get("[data-cy='image'").should("exist");
-      cy.get("[data-cy='title']").should("exist").contains("Ignite");
+      )
+      cy.get("[data-cy='image'").should('exist')
+      cy.get("[data-cy='title']").should('exist').contains('Ignite')
       cy.get("[data-cy='heading']")
-        .should("exist")
-        .contains("Shortcut your design and development");
+        .should('exist')
+        .contains('Shortcut your design and development')
       cy.get("[data-cy='paragraph']")
-        .should("exist")
+        .should('exist')
         .contains(
-          "Quickly design and customize responsive mobile-first sites with Bootstrap."
-        );
-      cy.get("[data-cy='button']").should("exist").contains("Learn more");
-    });
-  });
+          'Quickly design and customize responsive mobile-first sites with Bootstrap.'
+        )
+      cy.get("[data-cy='button']").should('exist').contains('Learn more')
+    })
+  })
 
-  describe("Bottom Hero", () => {
-    it("should render Bottom Hero", () => {
+  describe('Bottom Hero', () => {
+    it('should render Bottom Hero', () => {
       cy.mount(
         <BottomHero
           buttonText="Learn more &ensp;"
@@ -46,20 +46,20 @@ describe("<Hero />", () => {
           position="bottom"
           title="Ignite"
         />
-      );
-      cy.get("[data-cy='image'").should("exist");
-      cy.get("[data-cy='title']").should("exist").contains("Ignite");
+      )
+      cy.get("[data-cy='image'").should('exist')
+      cy.get("[data-cy='title']").should('exist').contains('Ignite')
       cy.get("[data-cy='heading']")
-        .should("exist")
+        .should('exist')
         .contains(
-          "Shortcut your design and development with our website starter kit"
-        );
-      cy.get("[data-cy='button']").should("exist").contains("Learn more");
-    });
-  });
+          'Shortcut your design and development with our website starter kit'
+        )
+      cy.get("[data-cy='button']").should('exist').contains('Learn more')
+    })
+  })
 
-  describe("Left Hero", () => {
-    it("should render Left Hero", () => {
+  describe('Left Hero', () => {
+    it('should render Left Hero', () => {
       cy.mount(
         <LeftHero
           buttonText="See feature list &ensp;"
@@ -73,24 +73,24 @@ describe("<Hero />", () => {
           position="left"
           title="Features"
         />
-      );
-      cy.get("[data-cy='image'").should("exist");
-      cy.get("[data-cy='title']").should("exist").contains("Features");
+      )
+      cy.get("[data-cy='image'").should('exist')
+      cy.get("[data-cy='title']").should('exist').contains('Features')
       cy.get("[data-cy='heading']")
-        .should("exist")
-        .contains("We got your website and design system project covered");
+        .should('exist')
+        .contains('We got your website and design system project covered')
       cy.get("[data-cy='paragraph']")
         .children()
-        .should("exist")
+        .should('exist')
         .contains(
-          "Quickly design and customize responsive mobile-first sites with Bootstrap."
-        );
-      cy.get("[data-cy='button']").should("exist").contains("See feature list");
-    });
-  });
+          'Quickly design and customize responsive mobile-first sites with Bootstrap.'
+        )
+      cy.get("[data-cy='button']").should('exist').contains('See feature list')
+    })
+  })
 
-  describe("Right Hero", () => {
-    it("should render Right Hero", () => {
+  describe('Right Hero', () => {
+    it('should render Right Hero', () => {
       cy.mount(
         <RightHero
           buttonText="See feature list &ensp;"
@@ -104,23 +104,23 @@ describe("<Hero />", () => {
           position="right"
           title="Features"
         />
-      );
-      cy.get("[data-cy='image'").should("exist");
-      cy.get("[data-cy='title']").should("exist").contains("Features");
+      )
+      cy.get("[data-cy='image'").should('exist')
+      cy.get("[data-cy='title']").should('exist').contains('Features')
       cy.get("[data-cy='heading']")
-        .should("exist")
-        .contains("We got your website and design system project covered");
+        .should('exist')
+        .contains('We got your website and design system project covered')
       cy.get("[data-cy='paragraph']")
-        .should("exist")
+        .should('exist')
         .contains(
-          "Quickly design and customize responsive mobile-first sites with Bootstrap."
-        );
-      cy.get("[data-cy='button']").should("exist").contains("See feature list");
-    });
-  });
+          'Quickly design and customize responsive mobile-first sites with Bootstrap.'
+        )
+      cy.get("[data-cy='button']").should('exist').contains('See feature list')
+    })
+  })
 
-  describe("TopHero", () => {
-    it("should render Top Hero", () => {
+  describe('TopHero', () => {
+    it('should render Top Hero', () => {
       cy.mount(
         <TopHero
           buttonText="Learn more &ensp;"
@@ -133,20 +133,20 @@ describe("<Hero />", () => {
           position="top"
           title="Ignite"
         />
-      );
-      cy.get("[data-cy='image'").should("exist");
-      cy.get("[data-cy='title']").should("exist").contains("Ignite");
+      )
+      cy.get("[data-cy='image'").should('exist')
+      cy.get("[data-cy='title']").should('exist').contains('Ignite')
       cy.get("[data-cy='heading']")
-        .should("exist")
+        .should('exist')
         .contains(
-          "Shortcut your design and development with our website starter kit"
-        );
+          'Shortcut your design and development with our website starter kit'
+        )
       cy.get("[data-cy='paragraph']")
-        .should("exist")
+        .should('exist')
         .contains(
-          "Quickly design and customize responsive mobile-first sites with Bootstrap."
-        );
-      cy.get("[data-cy='button']").should("exist").contains("Learn more");
-    });
-  });
-});
+          'Quickly design and customize responsive mobile-first sites with Bootstrap.'
+        )
+      cy.get("[data-cy='button']").should('exist').contains('Learn more')
+    })
+  })
+})

@@ -4,41 +4,41 @@
 
 export type NodesPath = {
   nodes: {
-    path: string;
-  }[];
-};
+    path: string
+  }[]
+}
 
 export type Image = {
-  width: number;
-  height: number;
-  url: string;
-};
+  width: number
+  height: number
+  url: string
+}
 
 export type Author = {
-  displayName: string;
-};
+  displayName: string
+}
 
 export type Page = {
-  __typename: "NodePage";
-  id: string;
-  status: boolean;
-  title: string;
-  path: string;
+  __typename: 'NodePage'
+  id: string
+  status: boolean
+  title: string
+  path: string
   body: {
-    processed: string;
-  };
-};
+    processed: string
+  }
+}
 
 export type Article = {
-  __typename: "NodeArticle";
-  id: string;
-  status: boolean;
-  title: string;
-  path: string;
-  author: Author;
+  __typename: 'NodeArticle'
+  id: string
+  status: boolean
+  title: string
+  path: string
+  author: Author
   body: {
-    processed: string;
-  };
-  created: string;
-  image: Image;
-};
+    processed: string
+  }
+  created: string
+  image: Image
+}
