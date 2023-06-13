@@ -2,6 +2,7 @@ import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import Image from 'react-bootstrap/Image'
 import { QuoteTypes } from '@/types/Quote'
+import '@/styles/components/quote.scss'
 
 const Quote = ({
   text,
@@ -12,7 +13,7 @@ const Quote = ({
 }: QuoteTypes) => {
   return (
     <div className="text-center d-flex justify-content-center p-3 pt-9 pb-9 bg-light rounded">
-      <Col lg={10} xxxl={6}>
+      <Col xl={6} lg={10}>
         <Row>
           <Col lg={3} className="quote-logo mx-auto mb-2">
             <Image
@@ -20,6 +21,8 @@ const Quote = ({
               className="img-fluid"
               alt="Logod"
               data-cy="logo"
+              width={110}
+              height={80}
             />
           </Col>
           <blockquote className="blockquote fs-4 mb-3 text-dark">
@@ -63,6 +66,8 @@ const Quote = ({
               className="img-fluid rounded-circle"
               alt="Photo of person quoted"
               data-cy="quote-image"
+              width={120}
+              height={90}
             />
           </div>
           <div className="quote-text">

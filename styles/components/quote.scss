@@ -1,0 +1,16 @@
+.quote-text {
+  margin-top: 3px;
+  text-align: left;
+  margin-left: 12px;
+}
+
+.blockquote {
+  .open-quote {
+    position: relative;
+    left: -15px;
+  }
+  .closed-quote {
+    position: relative;
+    left: 15px;
+  }
+}
