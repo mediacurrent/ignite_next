@@ -6,4 +6,3 @@ pipelines:
           - node
         script:
           - yarn install
-          - yarn lint

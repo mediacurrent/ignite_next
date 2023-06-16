@@ -1,7 +1,7 @@
 import { HeroTypes } from '@/types/Hero'
 import Icon from '@mdi/react'
 import { mdiArrowRight } from '@mdi/js'
-import { Col, Image, Card } from 'react-bootstrap'
+import { Col, Image } from 'react-bootstrap'
 
 export const LeftHero = ({
   img,

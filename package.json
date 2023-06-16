@@ -13,12 +13,14 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "cypress:open": "cypress open",
-    "test:components": "npx cypress run --component"
+    "test:components": "npx cypress run --component",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@mdi/js": "^7.2.96",
     "@storybook/preset-scss": "^1.0.3",
     "bootstrap": "^5.2.3",
+    "husky": "^8.0.3",
     "next": "^13",
     "next-drupal": "^1.5.0",
     "react": "^18.2.0",
@@ -44,12 +46,14 @@
     "cypress": "^12.13.0",
     "eslint": "^8.28.0",
     "eslint-config-next": "^13.0.6",
+    "eslint-plugin-cypress": "^2.13.3",
     "eslint-plugin-storybook": "^0.6.12",
     "postcss": "^8.1.0",
     "sass": "^1.62.1",
     "sass-loader": "^13.3.0",
     "storybook": "^7.0.14",
-    "typescript": "^4.9.3"
+    "typescript": "^4.9.3",
+    "husky": "^8.0.0"
   },
   "eslintConfig": {
     "extends": [
@@ -57,5 +61,11 @@
       "plugin:storybook/recommended",
       "plugin:storybook/recommended"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "echo ”[Husky] pre-commit”",
+      "pre-push": "echo ”[Husky] pre-push”"
+    }
   }
 }

@@ -26,7 +26,7 @@ export default function NodePage({ resource }: NodePageProps) {
   )
 }
 
-export async function getStaticPaths(context): Promise<GetStaticPathsResult> {
+export async function getStaticPaths(): Promise<GetStaticPathsResult> {
   // Fetch the paths for the first 50 articles and pages.
   // We'll fallback to on-demand generation for the rest.
   const data = await query<{
