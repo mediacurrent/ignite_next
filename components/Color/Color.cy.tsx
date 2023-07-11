@@ -44,7 +44,7 @@ const data = [
 ]
 
 describe('Color', () => {
-  it('should render the TextBlock', () => {
+  it('should render the Color', () => {
     cy.mount(<Color data={data} />)
     cy.get("[data-cy='color']").should('exist').should('be.visible')
   })

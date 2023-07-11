@@ -1,7 +1,7 @@
 import SingleCard from '.'
 
 describe('Quote', () => {
-  it('should render the TextBlock', () => {
+  it('should render the Single Card', () => {
     cy.mount(
       <SingleCard
         img="https://storybook.ignite.build/images/card.webp"
