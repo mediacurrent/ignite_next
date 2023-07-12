@@ -16,8 +16,8 @@ interface ModalTypes {
 }
 
 const ModalComponent = ({
-  buttonText='Launch demo modal',
-  modalName='example',
+  buttonText = 'Launch demo modal',
+  modalName = 'example',
   title,
   body,
   closeButtonName,

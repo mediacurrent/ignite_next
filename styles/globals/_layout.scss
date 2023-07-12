@@ -5,6 +5,7 @@ body {
   // Adding overflow-x: hidden to the body tag, we remove the possibility of the horizontal scroll bar showing up.
   // This happens in some cases on small screens when an element exceeds the overall width.
   overflow-x: hidden;
+  font-family: $font-family-sans-serif;
 }
 
 .container-fluid {
