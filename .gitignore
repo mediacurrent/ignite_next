@@ -96,3 +96,4 @@ $RECYCLE.BIN/
 
 storybook.log
 cypress/videos
+cypress/screenshots
