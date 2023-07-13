@@ -2,7 +2,14 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-const Spacing = ({ data }) => (
+interface SpacingTypes {
+  data: {
+    modifier: string
+    text: string
+  }[]
+}
+
+const Spacing = ({ data }: SpacingTypes) => (
   <>
     <h3 className="mb-4">Spacing</h3>
     <Container fluid>
