@@ -34,7 +34,7 @@ const data = [
   }
 ]
 
-export const Primary: Story = {
+export const Spinner: Story = {
   render: (args) => (
     <div className="d-flex">
       {data.map(({ variant }) => (
