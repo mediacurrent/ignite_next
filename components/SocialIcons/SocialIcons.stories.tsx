@@ -3,7 +3,7 @@ import SocialIcons from '@/components/SocialIcons'
 
 const meta: Meta<typeof SocialIcons> = {
   component: SocialIcons,
-  title: 'SocialIcons',
+  title: 'General/SocialIcons',
   tags: ['autodocs']
 }
 export default meta

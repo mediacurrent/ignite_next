@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import TextBlock from '@/components/TextBlock'
 const meta: Meta<typeof TextBlock> = {
   component: TextBlock,
-  title: 'TextBlock',
+  title: 'General/TextBlock',
   tags: ['autodocs']
 }
 export default meta

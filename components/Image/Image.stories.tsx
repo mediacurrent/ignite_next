@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import Image from '@/components/Image'
 const meta: Meta<typeof Image> = {
   component: Image,
-  title: 'Image',
+  title: 'General/Image',
   tags: ['autodocs']
 }
 export default meta

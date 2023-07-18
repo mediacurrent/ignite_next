@@ -3,7 +3,7 @@ import SpinnerComponent from '@/components/Spinner'
 
 const meta: Meta<typeof SpinnerComponent> = {
   component: SpinnerComponent,
-  title: 'Spinner',
+  title: 'General/Spinner',
   tags: ['autodocs']
 }
 export default meta

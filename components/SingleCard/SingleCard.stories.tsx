@@ -3,7 +3,7 @@ import SingleCard from '@/components/SingleCard'
 
 const meta: Meta<typeof SingleCard> = {
   component: SingleCard,
-  title: 'SingleCard',
+  title: 'General/SingleCard',
   tags: ['autodocs']
 }
 export default meta

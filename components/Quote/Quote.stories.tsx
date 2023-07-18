@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import Quote from '@/components/Quote'
 const meta: Meta<typeof Quote> = {
   component: Quote,
-  title: 'Quote',
+  title: 'General/Quote',
   tags: ['autodocs']
 }
 export default meta

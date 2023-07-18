@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import Color from '@/components/Color'
 const meta: Meta<typeof Color> = {
   component: Color,
-  title: 'Color',
+  title: 'General/Color',
   tags: ['autodocs']
 }
 export default meta

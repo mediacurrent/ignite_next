@@ -4,7 +4,7 @@ import SiteFooter from '@/components/SiteFooter'
 
 const meta: Meta<typeof SiteFooter> = {
   component: SiteFooter,
-  title: 'SiteFooter',
+  title: 'General/SiteFooter',
   tags: ['autodocs']
 }
 export default meta

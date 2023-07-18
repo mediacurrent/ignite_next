@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import Shadow from '@/components/Shadow'
 const meta: Meta<typeof Shadow> = {
   component: Shadow,
-  title: 'Shadow',
+  title: 'General/Shadow',
   tags: ['autodocs']
 }
 export default meta

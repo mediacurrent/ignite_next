@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import Hero from '@/components/Hero/index'
 const meta: Meta<typeof Hero> = {
   component: Hero,
-  title: 'Hero',
+  title: 'General/Hero',
   tags: ['autodocs']
 }
 export default meta

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import Spacing from '@/components/Spacing'
 const meta: Meta<typeof Spacing> = {
   component: Spacing,
-  title: 'Spacing',
+  title: 'General/Spacing',
   tags: ['autodocs']
 }
 export default meta

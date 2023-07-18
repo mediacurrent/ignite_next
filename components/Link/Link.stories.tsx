@@ -3,7 +3,7 @@ import Link from '@/components/Link'
 
 const meta: Meta<typeof Link> = {
   component: Link,
-  title: 'Link',
+  title: 'General/Link',
   tags: ['autodocs']
 }
 export default meta
