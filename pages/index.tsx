@@ -37,9 +37,9 @@ export default function IndexPage({ nodes }: IndexPageProps) {
   )
 }
 
-export async function getStaticProps(
-  context
-): Promise<GetStaticPropsResult<IndexPageProps>> {
+export async function getStaticProps(): Promise<
+  GetStaticPropsResult<IndexPageProps>
+> {
   // Fetch the first 10 articles.
   const data = await query<{
     nodeArticles: {

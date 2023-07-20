@@ -1,4 +1,4 @@
-import { Col, Image, Card, Row } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap'
 type TextBlockTypes = {
   title?: string
   paragraphText?: string
