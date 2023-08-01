@@ -22,8 +22,8 @@ const SingleCard = ({
 
     <div className="card-body p-0 mt-2">
       <ul className="list-inline mb-2">
-        {badges.map(({ text }) => (
-          <li className="list-inline-item">
+        {badges.map(({ text }, idx: number) => (
+          <li className="list-inline-item" key={idx}>
             <Badge
               className="rounded-pill p-1 px-2 fs-7 fw-semibold text-bg-primary"
               data-cy="badge"
@@ -45,8 +45,8 @@ const SingleCard = ({
         dangerouslySetInnerHTML={{ __html: description }}
       />
       <ul className="list-inline mb-0">
-        {buttons.map(({ text, primary }) => (
-          <li className="list-inline-item">
+        {buttons.map(({ text, primary }, index: number) => (
+          <li className="list-inline-item" key={text + index}>
             <Button data-cy="button" buttonText={text} primary={primary} />
           </li>
         ))}

@@ -1,4 +1,5 @@
 import Ratio from 'react-bootstrap/Ratio'
+import React from 'react'
 
 interface VideoTypes {
   videoSrc: React.ReactChild

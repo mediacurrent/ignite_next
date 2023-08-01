@@ -17,8 +17,8 @@ const InLineNavigation = ({ items }: InLineNavigationTypes) => (
       Inline navigation
     </Dropdown.Toggle>
     <Dropdown.Menu data-cy="drop-menu">
-      {items.map(({ text, url }) => (
-        <Dropdown.Item href={url} data-cy="drop-item">
+      {items.map(({ text, url }, idx: number) => (
+        <Dropdown.Item href={url} data-cy="drop-item" key={idx}>
           {text}
         </Dropdown.Item>
       ))}

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import type { Meta, StoryObj } from '@storybook/react'
 import Shadow from '@/components/Shadow'
 const meta: Meta<typeof Shadow> = {
@@ -29,8 +30,8 @@ const data = [
 export const Default: Story = {
   render: (_) => (
     <div>
-      {data.map(({ size, text, noShadow }) => (
-        <Shadow size={size} text={text} noShadow={noShadow} />
+      {data.map(({ size, text, noShadow }, idx: number) => (
+        <Shadow size={size} text={text} noShadow={noShadow} key={idx} />
       ))}
     </div>
   )

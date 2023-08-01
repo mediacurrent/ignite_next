@@ -29,7 +29,7 @@ const Pager = ({ headingId, items: { previous, next, pages } }: PagerTypes) => (
         {previous.text}
       </Pagination.Prev>
       {pages.map(({ href }, idx) => (
-        <Pagination.Item data-cy="pagination-item" href={href}>
+        <Pagination.Item data-cy="pagination-item" href={href} key={idx}>
           {idx + 1}
         </Pagination.Item>
       ))}

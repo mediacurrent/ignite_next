@@ -9,8 +9,8 @@ interface UtilityNavTypes {
 
 const UtilityNav = ({ items }: UtilityNavTypes) => (
   <Nav data-cy="utility-nav-container">
-    {items.map(({ text, href }) => (
-      <Nav.Item data-cy="utility-nav-item">
+    {items.map(({ text, href }, idx: number) => (
+      <Nav.Item data-cy="utility-nav-item" key={text + idx}>
         <a href={href} className="nav-link" data-cy="utility-nav-link">
           {text}
         </a>

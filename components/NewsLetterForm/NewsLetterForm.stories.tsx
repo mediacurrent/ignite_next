@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import NewsLetterForm from '@/components/NewsLetterForm'
 const meta: Meta<typeof NewsLetterForm> = {
   component: NewsLetterForm,
-  title: 'NewsLetterForm',
+  title: 'General/NewsLetterForm',
   tags: ['autodocs']
 }
 export default meta

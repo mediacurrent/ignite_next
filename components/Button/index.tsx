@@ -1,5 +1,3 @@
-import Button from 'react-bootstrap/Button'
-
 import { ButtonTypes } from '@/types/Button'
 import Icon from '@mdi/react'
 import { mdiArrowRight } from '@mdi/js'

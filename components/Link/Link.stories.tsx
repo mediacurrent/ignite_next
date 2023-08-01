@@ -47,8 +47,8 @@ const data = [
 export const Primary: Story = {
   render: (args) => (
     <div className="d-flex justify-content-between">
-      {data.map(({ text, type }) => (
-        <Link text={text} type={type} {...args} />
+      {data.map(({ text, type }, idx: number) => (
+        <Link text={text} type={type} {...args} key={idx} />
       ))}
     </div>
   )

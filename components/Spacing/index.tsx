@@ -14,8 +14,8 @@ const Spacing = ({ data }: SpacingTypes) => (
     <h3 className="mb-4">Spacing</h3>
     <Container fluid>
       <Row>
-        {data.map(({ modifier, text }) => (
-          <Col className="align-self-end" data-cy="spacing">
+        {data.map(({ modifier, text }, idx: number) => (
+          <Col className="align-self-end" data-cy="spacing" key={text + idx}>
             <div className={modifier}></div>
             <div className="text-center text-dark">{text}</div>
           </Col>

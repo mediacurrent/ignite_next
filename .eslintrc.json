@@ -1,6 +1,8 @@
 {
   "parserOptions": {
-    "ecmaVersion": "latest"
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "allowImportExportEverywhere": true
   },
   "env": {
     "browser": true,
@@ -14,5 +16,6 @@
   ],
   "rules": {
     "no-unsafe-optional-chaining": "warn"
-  }
+  },
+  "ignorePatterns": ["**/pages"]
 }

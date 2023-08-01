@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import type { Meta, StoryObj } from '@storybook/react'
 import SpinnerComponent from '@/components/Spinner'
 
@@ -37,8 +38,8 @@ const data = [
 export const Spinner: Story = {
   render: (args) => (
     <div className="d-flex">
-      {data.map(({ variant }) => (
-        <SpinnerComponent variant={variant} />
+      {data.map(({ variant }, idx: number) => (
+        <SpinnerComponent variant={variant} key={idx} />
       ))}
     </div>
   )

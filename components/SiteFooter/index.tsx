@@ -1,3 +1,4 @@
+import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -43,8 +44,8 @@ const SiteFooter = ({
           <div className="mb-9 fs-5 fw-semibold">
             <div className={menuModifier}>
               <ul className="list-unstyled">
-                {links.map(({ url, text }) => (
-                  <li data-cy="site-footer-links">
+                {links.map(({ url, text }, idx: number) => (
+                  <li data-cy="site-footer-links" key={text + idx}>
                     <a href={url} className="text-decoration-none ">
                       {text}
                     </a>
@@ -56,22 +57,25 @@ const SiteFooter = ({
           <div>
             <div className="justify-content-lg-end d-lg-flex">
               <ul className="social-icons list-inline">
-                {socialIcons.map(({ url, ariaLabel, name, modifier, icon }) => (
-                  <li
-                    data-cy="site-footer-social-links"
-                    className="list-inline-item"
-                  >
-                    <a
-                      href={url}
-                      aria-label={ariaLabel}
-                      // @ts-ignore - name does not exist on DetailedHTMLProps
-                      name={name}
-                      className={modifier}
+                {socialIcons.map(
+                  ({ url, ariaLabel, name, modifier, icon }, index: number) => (
+                    <li
+                      data-cy="site-footer-social-links"
+                      className="list-inline-item"
+                      key={name + index}
                     >
-                      {icon}
-                    </a>
-                  </li>
-                ))}
+                      <a
+                        href={url}
+                        aria-label={ariaLabel}
+                        // @ts-ignore - name does not exist on DetailedHTMLProps
+                        name={name}
+                        className={modifier}
+                      >
+                        {icon}
+                      </a>
+                    </li>
+                  )
+                )}
               </ul>
             </div>
           </div>

@@ -12,7 +12,6 @@ export const MainNavigation: Story = {
   args: {
     modifier: 'navbar-light bg-white border-bottom',
     linkModifier: 'text-dark',
-    siteLogo: './images/logo.svg',
     items: [
       {
         title: 'Menu Item 1',

@@ -12,8 +12,8 @@ interface MenuTypes {
 const Menu = ({ modifier = '', items }: MenuTypes) => (
   <div className={modifier} data-cy="menu-container">
     <ul className="list-unstyled">
-      {items.map(({ itemModifier, href, text }) => (
-        <li className={itemModifier} data-cy="menu-item">
+      {items.map(({ itemModifier, href, text }, idx: number) => (
+        <li className={itemModifier} data-cy="menu-item" key={idx}>
           <a href={href} className="text-decoration-none">
             {text}
           </a>
