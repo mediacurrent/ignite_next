@@ -20,6 +20,10 @@
 
 #basic-nav-dropdown-active {
   text-decoration: underline;
-      text-decoration-color: #0069f6;
-      text-underline-offset: 8px;
+  text-decoration-color: #0069f6;
+  text-underline-offset: 8px;
+}
+
+.container-fluid {
+  padding: 0 24px;
 }
