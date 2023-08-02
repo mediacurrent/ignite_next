@@ -1,0 +1,55 @@
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+
+.site-footer .logo {
+  display: block;
+  max-width: 300px;
+  margin-bottom: 2rem;
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.site-footer .list-unstyled {
+  margin-bottom: 0;
+  li {
+    margin-right: 2rem;
+  }
+  li:last-child {
+    margin-right: 0;
+  }
+}
+
+.site-footer.bg-black a {
+  color: #fff;
+}
+
+.social-icons .list-inline-item a.social-icon-dark {
+  svg {
+    fill: #fff;
+    path {
+      fill: #fff;
+    }
+  }
+}
+
+.social-icons {
+  .list-inline-item {
+    margin-right: 3rem;
+  }
+  .list-inline-item:last-child {
+    margin-right: 0;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .site-footer .logo {
+    margin-bottom: 0px;
+  }
+  .site-footer .list-unstyled li {
+    display: inline-block;
+  }
+}

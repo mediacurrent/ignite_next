@@ -1,7 +1,7 @@
 import Quote from '.'
 
 describe('Quote', () => {
-  it('should render the TextBlock', () => {
+  it('should render the Quote', () => {
     cy.mount(
       <Quote
         author="Peggy Maher"

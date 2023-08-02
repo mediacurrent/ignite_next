@@ -1,0 +1,29 @@
+.navbar-brand {
+  .logo {
+    display: block;
+    width: 166px;
+  }
+}
+
+.navbar-nav {
+  .nav-link.nav-item {
+    padding-left: 0;
+    padding-right: 0;
+
+    &.active {
+      text-decoration: underline;
+      text-decoration-color: #0069f6;
+      text-underline-offset: 8px;
+    }
+  }
+}
+
+#basic-nav-dropdown-active {
+  text-decoration: underline;
+  text-decoration-color: #0069f6;
+  text-underline-offset: 8px;
+}
+
+.container-fluid {
+  padding: 0 24px;
+}

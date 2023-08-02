@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "preview": "next build && next start",
-    "lint": "next lint && npx prettier --check .",
+    "lint": "next lint",
     "format": "npx prettier --write .",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",

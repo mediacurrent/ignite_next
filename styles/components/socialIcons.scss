@@ -1,0 +1,18 @@
+.social-icons .list-inline-item a.social-icon-dark {
+  svg {
+    fill: #fff;
+    path {
+      fill: #fff;
+    }
+  }
+}
+
+.social-icons {
+  margin-bottom: 0;
+  .list-inline-item {
+    margin-right: 3rem;
+  }
+  .list-inline-item:last-child {
+    margin-right: 0;
+  }
+}

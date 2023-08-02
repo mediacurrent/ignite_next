@@ -6,4 +6,4 @@ pipelines:
           - node
         script:
           - yarn install
-          - yarn lint
+          - NEXT_IMAGE_DOMAIN='domain' yarn lint
